@@ -1,0 +1,116 @@
+﻿<Window x:Class="SIACBatt.winMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SIACBatt"
+        xmlns:lang = "clr-namespace:SIACBatt.Languages"
+        mc:Ignorable="d"
+        Title="{x:Static lang:Resource.Title}"
+        Width="500" Height="300" Icon="Images/favicon.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="25" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <GroupBox Grid.Row="0" Grid.Column="0" Header="{x:Static lang:Resource.InputHeader}" Name="grpFormInput">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="30" />
+                    </Grid.ColumnDefinitions>
+                    <Label Content="{x:Static lang:Resource.InputTitleCOM}" VerticalAlignment="Center" />
+                    <ComboBox Grid.Column="1" Margin="2" Name="cmbCOMPorts" DisplayMemberPath="Value" IsSynchronizedWithCurrentItem="True" FontSize="14" TabIndex="1" />
+                    <Button Grid.Column="2" Margin="2" Name="btnCOMPortRefresh" Content="⟳" TabIndex="2" Click="btnCOMPortRefresh_Click" />
+                </Grid>
+            </GroupBox>
+
+            <GroupBox Grid.Row="1" Grid.Column="0" Header="{x:Static lang:Resource.OutputHeader}" Name="grpFormOutput">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <Viewbox Grid.Row="0" Grid.Column="0" Stretch="Uniform" HorizontalAlignment="Right">
+                        <Label Content="{x:Static lang:Resource.OutputTitleSSID}" Padding="8" />
+                    </Viewbox>
+                    <Viewbox Grid.Row="0" Grid.Column="1" Stretch="Uniform">
+                        <TextBox Name="txbNumber" Padding="5" BorderThickness="0"/>
+                    </Viewbox>
+
+                    <Viewbox Grid.Row="1" Grid.Column="0" Stretch="Uniform" HorizontalAlignment="Right">
+                        <Label Content="{x:Static lang:Resource.OutputTitleVoltage}" Padding="8" />
+                    </Viewbox>
+                    <Rectangle Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Name="recVoltageBackground" Margin="5"/>
+                    <Viewbox Grid.Row="1" Grid.Column="1" Stretch="Uniform">
+                        <TextBox Name="txbVoltage" Padding="5" BorderThickness="0" Background="{x:Null}"/>
+                    </Viewbox>
+                    <Viewbox Grid.Row="1" Grid.Column="2" Stretch="Uniform">
+                        <Label Name="lbVoltageStatus" Padding="5"/>
+                    </Viewbox>
+                    <Viewbox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Stretch="Uniform">
+                        <TextBox Name="txbVoltageDescription" Padding="5,0,5,8" BorderThickness="0" Background="{x:Null}"/>
+                    </Viewbox>
+
+                    <Viewbox Grid.Row="3" Grid.Column="0" Stretch="Uniform" HorizontalAlignment="Right">
+                        <Label Content="{x:Static lang:Resource.OutputTitleDate}" Padding="8" />
+                    </Viewbox>
+                    <Rectangle Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Name="recDateBackground" Margin="5"/>
+                    <Viewbox Grid.Row="3" Grid.Column="1" Stretch="Uniform">
+                        <TextBox Name="txbDate" Padding="5" BorderThickness="0" Background="{x:Null}"/>
+                    </Viewbox>
+                    <Viewbox Grid.Row="3" Grid.Column="2" Stretch="Uniform">
+                        <Label Name="lbDateStatus" Padding="5"/>
+                    </Viewbox>
+                    <Viewbox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Stretch="Uniform">
+                        <TextBox Name="txbDateDescription" Padding="5,0,5,8" BorderThickness="0" Background="{x:Null}"/>
+                    </Viewbox>
+                </Grid>
+            </GroupBox>
+        </Grid>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" Name="grpButtons">
+            <Button Name="btnConnect" Content="{x:Static lang:Resource.BtnConnect}" Width="110" Height="30" Margin="5" TabIndex="1000" Click="btnConnect_Click" />
+            <Button Name="btnFullscreen" Content="{x:Static lang:Resource.BtnFullscreen}" Width="110" Height="30" Margin="5" TabIndex="1001" Click="btnFullscreen_Click" />
+            <Button Name="btnExit" Content="{x:Static lang:Resource.BtnExit}" Width="110" Height="30" Margin="5" TabIndex="1010" Click="btnExit_Click" />
+            <Label FontSize="9.333" HorizontalAlignment="Center">V1.0 | Viktor Öhlén</Label>
+        </StackPanel>
+
+        <Canvas>
+            <Button x:Name="btnFullscreenExit" Content="❌"  Canvas.Right="5" Canvas.Top="5" Padding="5" Width="30" Opacity="0.25" Visibility="Collapsed" Click="btnFullscreenExit_Click"></Button>
+        </Canvas>
+
+        <StatusBar Grid.Row="1" Grid.ColumnSpan="2" Name="sbar">
+            <StatusBarItem Name="sbarSIStatus" Width="30" Background="Red" Foreground="Black" HorizontalContentAlignment="Center">
+                <TextBlock Name="txtSIStatus">SI</TextBlock>
+            </StatusBarItem>
+            <Separator></Separator>
+            <StatusBarItem>
+                <TextBlock Name="txtInfo">-</TextBlock>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>

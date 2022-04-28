@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BtnConnect" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="BtnDisconnect" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="BtnExit" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="BtnFullscreen" xml:space="preserve">
+    <value>Fullscreen</value>
+  </data>
+  <data name="InfoConnectedMaster" xml:space="preserve">
+    <value>Connected to no.: {0}, OpMode: {1}, AutoSend: {2}, Legacy: {3}</value>
+  </data>
+  <data name="InfoConnectedSimSrr" xml:space="preserve">
+    <value>S/N: {0}, FW: {1}, OpMode: {2}, Protocol: {3}, Channel: {4}</value>
+  </data>
+  <data name="InfoInputSource" xml:space="preserve">
+    <value>Input via {0}</value>
+  </data>
+  <data name="InfoUnknownDevice" xml:space="preserve">
+    <value>Unknown device</value>
+  </data>
+  <data name="InputHeader" xml:space="preserve">
+    <value>SI-Master</value>
+  </data>
+  <data name="InputTitleCOM" xml:space="preserve">
+    <value>COM-Port:</value>
+  </data>
+  <data name="MsgBoxErrorConfig" xml:space="preserve">
+    <value>The device configuration could not be read successfully. Reason is probably: {0} ({1})</value>
+  </data>
+  <data name="MsgBoxErrorConfigAutosend" xml:space="preserve">
+    <value>The device is configured with autosend flag.
+
+Please reconfigure without autosend!</value>
+  </data>
+  <data name="MsgBoxErrorConfigDescriptionBackupReadout" xml:space="preserve">
+    <value>Reading the backup of SI-Master with firmware &lt; FW595 is not supported.</value>
+  </data>
+  <data name="MsgBoxErrorConfigDescriptionNo" xml:space="preserve">
+    <value>No description available</value>
+  </data>
+  <data name="MsgBoxErrorConfigDescriptionNoBackup" xml:space="preserve">
+    <value>The device does not have a backup memory storage.</value>
+  </data>
+  <data name="MsgBoxErrorConfigDescriptionOpMode" xml:space="preserve">
+    <value>The selected operating mode is not supported on the current device.</value>
+  </data>
+  <data name="MsgBoxErrorConfigLegacy" xml:space="preserve">
+    <value>The device is configured to use legacy protocol.
+This application does not support legacy protocol.
+
+Please reconfigure!</value>
+  </data>
+  <data name="MsgBoxErrorConfigNoDevice" xml:space="preserve">
+    <value>No compatible device was found.
+
+Please connect a SI Master device!</value>
+  </data>
+  <data name="MsgBoxErrorConfigRedout" xml:space="preserve">
+    <value>The device is not configured to read cards. No data can be processed from this station.
+
+Please reconfigure!</value>
+  </data>
+  <data name="MsgBoxErrorConfigTitle" xml:space="preserve">
+    <value>SIDB Info</value>
+  </data>
+  <data name="MsgBoxErrorDeviceDetermine" xml:space="preserve">
+    <value>Could not determine device. Please refresh the device list and retry.</value>
+  </data>
+  <data name="MsgBoxErrorDeviceException" xml:space="preserve">
+    <value>An exception occurred preparing the device {0}:
+
+{1}.</value>
+  </data>
+  <data name="MsgBoxErrorDeviceOpen" xml:space="preserve">
+    <value>Could not open the input device, please check device configuration.</value>
+  </data>
+  <data name="MsgBoxErrorTitle" xml:space="preserve">
+    <value>Error occurred!</value>
+  </data>
+  <data name="OutputHeader" xml:space="preserve">
+    <value>Battery Status</value>
+  </data>
+  <data name="OutputResultDateError" xml:space="preserve">
+    <value>The battery is older than {0} years, replace immediately!</value>
+  </data>
+  <data name="OutputResultDateOK" xml:space="preserve">
+    <value>Battery replacement {0}.</value>
+  </data>
+  <data name="OutputResultDateWaring" xml:space="preserve">
+    <value>The battery is soon {0} years old, replace {1}.</value>
+  </data>
+  <data name="OutputResultVoltageError" xml:space="preserve">
+    <value>Voltage is below {0}V. Do not use the card!</value>
+  </data>
+  <data name="OutputResultVoltageOK" xml:space="preserve">
+    <value>Voltage is over {0}V.</value>
+  </data>
+  <data name="OutputResultVoltageWarning" xml:space="preserve">
+    <value>Voltage is below {0}V. Prepare replacement.</value>
+  </data>
+  <data name="OutputTitleDate" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="OutputTitleSSID" xml:space="preserve">
+    <value>SIID:</value>
+  </data>
+  <data name="OutputTitleVoltage" xml:space="preserve">
+    <value>Voltage:</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>SPORTident ActiveCard Battery Status</value>
+  </data>
+</root>
